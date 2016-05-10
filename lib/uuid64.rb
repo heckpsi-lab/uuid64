@@ -9,9 +9,9 @@ module SecureRandom
 
   def self.mongo_id
     if @mongo_init.nil?
-      @mongo_init = true
+      @mongo_init = true.freeze
       @mongo_host = Digest::SHA2.hexdigest(Socket.gethostname)[0..5].freeze
-      @mongo_pid = Process.pid.to_s(16)[0..3].rjust(4, '0')
+      @mongo_pid = Process.pid.to_s(16)[0..3].rjust(4, '0').freeze
       @mongo_inc = 0
     else
       @mongo_inc += 1
