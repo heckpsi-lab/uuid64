@@ -4,7 +4,7 @@ require 'digest'
 
 module SecureRandom
   def self.uuid64
-    [[SecureRandom.uuid.gsub(/-/, '')].pack('H*')].pack('m').gsub(/==/,'').gsub(/\n/,'')
+    [[SecureRandom.uuid.delete('-')].pack('H*')].pack('m').delete('=').chomp
   end
 
   def self.mongo_id
@@ -25,6 +25,6 @@ module SecureRandom
   end
 
   def self.mongo_id64
-    [[SecureRandom.mongo_id].pack('H*')].pack('m').gsub(/\n/,'')
+    [[SecureRandom.mongo_id].pack('H*')].pack('m').chomp
   end
 end
