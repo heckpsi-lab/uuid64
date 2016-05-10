@@ -1,5 +1,6 @@
 # uuid64
 This is a library generating unique id in short pattern.
+
 1. Generate a 64-bit encoded uuid in Ruby with length of 22.
 2. Generate a 16-bit encoded object_id like what it is in BSON.
 3. Generate a 64-bit encoded object_id like what it is in BSON with length of 16.
@@ -22,7 +23,7 @@ gem 'uuid64'
 ### Generate
 ```ruby
 require 'uuid64'
-puts SecureRandom.uuid64
-puts SecureRandom.mongo_id
-puts SecureRandom.mongo_id64
+puts SecureRandom.uuid64 # "Ymu4xVZrRP29PPnixxwoPg"
+puts SecureRandom.mongo_id # "57320baec9de9a14d2000000"
+puts SecureRandom.mongo_id64 # "VzILtMnemhTSAAAD"
 ```
