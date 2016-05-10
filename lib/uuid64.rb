@@ -15,6 +15,7 @@ module SecureRandom
       @mongo_inc = 0
     else
       @mongo_inc += 1
+      @mongo_inc = 0 if @mongo_inc > 16777215
     end
 
     Time.now.to_i.to_s(16)[0..15].rjust(8, '0')[0..7] +
