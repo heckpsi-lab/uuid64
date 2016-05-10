@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ['HeckPsi Lab']
   s.email       = 'business@heckpsi.com'
   s.files       = ['lib/uuid64.rb']
-  s.homepage    =
-      'https://github.com/heckpsi-lab/uuid64'
-  s.license       = 'MIT'
+  s.homepage    = 'https://github.com/heckpsi-lab/uuid64'
+  s.license     = 'MIT'
 end
