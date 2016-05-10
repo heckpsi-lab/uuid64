@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'uuid64'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.required_ruby_version = '>=2.3.0'
   s.date        = '2016-05-11'
   s.summary     = 'This is a library generating unique id in short pattern.'
