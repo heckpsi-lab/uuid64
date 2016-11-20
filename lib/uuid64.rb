@@ -11,7 +11,7 @@ module SecureRandom
     end
 
     def uuid62
-      uuid.base62_encode
+      uuid.delete('-').to_i(16).base62_encode
     end
 
     def mongo_id
@@ -31,9 +31,9 @@ module SecureRandom
     def mongo_id64
       [[mongo_id].pack('H*')].pack('m').chomp
     end
-
+    
     def mongo_id62
-      mongo_id.base62_encode
+      mongo_id.to_i(16).base62_encode
     end
   end
 end
